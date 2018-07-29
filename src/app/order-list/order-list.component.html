@@ -1,0 +1,37 @@
+<div class="receipt mat-elevation-z4">
+  <div class="receipt-header">
+    <h5>{{restaurant.name}}</h5>
+    <p>Orden Num: {{id}}</p>
+  </div>
+  <mat-nav-list class="order-list">
+    <mat-list-item *ngFor="let menuItem of order.orderList">
+      <a matLine>{{menuItem.howMany}} x {{menuItem.title | titlecase}}
+        <span [matMenuTriggerFor]="menu" class="menu-item-price">L. {{menuItem.howMany*menuItem.price}}</span>
+      </a>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="plus(menuItem)">
+          <mat-icon>add_circle</mat-icon>
+          <span>Agregar</span>
+        </button>
+        <button mat-menu-item (click)="decrease(menuItem)">
+          <mat-icon>do_not_disturb_on</mat-icon>
+          <span>Disminuir</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>card_giftcard</mat-icon>
+          <span>Gratuito</span>
+        </button>
+        <button mat-menu-item (click)="delete(menuItem)">
+          <mat-icon>delete</mat-icon>
+          <span>Borrar</span>
+        </button>
+      </mat-menu>
+    </mat-list-item>
+  </mat-nav-list>
+  <hr>
+  <div class="receipt-footer">
+    <div>Subtotal ------ L. {{calcSubtotal()}}</div>
+    <div>ISV ------ L. {{calcISV()}}</div>
+    <div class="order-total">Total ---- L. {{calcTotal()}}</div>
+  </div>
+</div>

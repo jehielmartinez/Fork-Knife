@@ -1,0 +1,8 @@
+<form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+  <div>
+    <mat-form-field>
+      <input matInput type="text" class="browser-default form-control" placeholder="Nueva Categoria" formControlName="categoryName">
+    </mat-form-field>
+    <button type="submit" mat-mini-fab class="accent-color"><mat-icon>add</mat-icon></button>
+  </div>
+</form>

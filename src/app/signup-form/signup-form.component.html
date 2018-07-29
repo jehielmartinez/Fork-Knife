@@ -1,0 +1,34 @@
+<div class="container center-align box mat-elevation-z4">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field>
+      <input matInput type="text" class="browser-default form-control" placeholder="Nombre" formControlName="name" id="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="number" class="browser-default form-control" placeholder="Edad" formControlName="age" id="age">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="tel" class="browser-default form-control" placeholder="Telefono" formControlName="telephone" id="telephone">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput type="text" class="browser-default form-control" placeholder="Direccion" formControlName="address" id="address"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="email" class="browser-default form-control" placeholder="Correo Electronico" formControlName="email"
+        id="email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="password" class="browser-default form-control" placeholder="Contraseña" formControlName="password"
+        id="password">
+    </mat-form-field>
+
+    <div>
+      <button mat-raised-button type="submit" class="button accent-color">Registrar</button>
+      <button mat-raised-button routerLink="/dashboard" class="button">Cancelar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+nav{
+    height: 55px;
+}
+.nav-wrapper{
+    background-color: #00BCD4;
+    font-family: 'Roboto-slab';
+}
+.material-icons{
+    padding: 0 15px;
+}
+.logo{
+    height: 55px;
+    width: auto;
+    padding: 5px;
+}

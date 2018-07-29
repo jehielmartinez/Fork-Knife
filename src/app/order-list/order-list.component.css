@@ -1,0 +1,32 @@
+
+.receipt{
+    position: relative;
+    top:20px;
+    background-color: white;
+    padding: 2%;
+    max-height: 85vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.receipt-header{
+    text-align: center;
+    line-height: 8px;
+}
+
+.menu-item-price{
+    position: absolute;
+    right: 10px;
+}
+.spacer{
+    flex: 1 1 auto;
+    float: right;
+}
+.receipt-footer{
+    font-size: 18px;
+    font-style: italic;
+    text-align: right;
+}
+.order-total{
+    font-size: 25px;
+    font-weight: bold;
+}

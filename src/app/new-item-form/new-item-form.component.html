@@ -1,0 +1,33 @@
+<div class="container center-align box">
+  <h6>Nuevo Elemento de Menú</h6>
+  <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-select placeholder="Categoria" class="form-control" formControlName="category">
+        <mat-option *ngFor="let category of categories" [value]="category.categoryName">
+          {{ category.categoryName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="text" class="browser-default form-control" placeholder="Titulo" formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput type="text" class="browser-default form-control" placeholder="Descripción" formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="number" class="browser-default form-control" placeholder="Precio" formControlName="price">
+    </mat-form-field>
+
+    <mat-form-field>
+      <ngx-mat-file-input class="browser-default form-control" formControlName="imageURL" placeholder="Escoja una Imagen"></ngx-mat-file-input>
+    </mat-form-field>
+
+    <div>
+      <button mat-raised-button class="button accent-color">Ingresar</button>
+      <button mat-raised-button class="button">Cancelar</button>
+    </div>
+  </form>
+</div>
